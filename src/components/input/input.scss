@@ -1,0 +1,97 @@
+@import '../../color-palette.scss';
+@import '../../sizing.scss';
+
+.input-wrapper {
+  font-family: "On Air Var", sans-serif;
+  letter-spacing: 0.16px;
+  width: 100%;
+  color: $gray-950; 
+
+  & .label {
+    display: inline-block;
+    margin-bottom: $spacing-xs;
+  }
+
+  & .input-label--optional {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 17px;
+    color: $gray-500;
+    margin-left: $spacing-xs;
+  }
+
+  & .input {
+    border-radius: 12px;
+    border: 1px solid $gray-500;;
+    width: 100%;
+    padding: $spacing-s $spacing-xs $spacing-s $spacing-m;
+    caret-color: $blue-500;
+    background-color: $white;
+    margin: 2px;
+
+    &::placeholder {
+      color: $gray-300;
+      opacity: 1;
+    }
+    &::-ms-input-placeholder {
+      color: $gray-300;
+    }
+
+    &:disabled {
+      background-color: $dim-50;
+      cursor: not-allowed;
+    }
+    &:focus-visible {
+      border: 3px solid $dim-800;
+      outline-width: 0;
+      margin: 0;
+    }
+  }
+
+  & .input-label-m {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+
+  & .input-label-s {
+    font-size: 14px;
+    font-weight: 550;
+    line-height: 17px;
+  }
+
+  &.input-wrapper--error {
+    & .input {
+      border-color: $red-600;
+      color: $red-600;
+      background-color: $red-100;
+    }
+    & .input-message {
+      font-size: 14px;
+      line-height: 17px;
+      width: fit-content;
+      padding: $spacing-xs $spacing-s $spacing-xs $spacing-xs;
+      border-left: 3px solid $red-600;
+      color: $red-600;
+      background-color: $red-100;
+      margin-bottom: $spacing-s;
+    }
+  }
+  &.input-wrapper--warning {
+    & .input {
+      border-color: $yellow-700;
+      color: $yellow-700;
+      background-color: $yellow-100;
+    }
+    & .input-message {
+      font-size: 14px;
+      line-height: 17px;
+      width: fit-content;
+      padding: $spacing-xs $spacing-s $spacing-xs $spacing-xs;
+      border-left: 3px solid $yellow-700;
+      color: $yellow-700;
+      background-color: $yellow-100;
+      margin-bottom: $spacing-s;
+    }
+  }
+}

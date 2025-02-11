@@ -1,0 +1,29 @@
+.App {
+  * {
+    box-sizing: border-box;
+  }
+
+  font-family: On Air Var;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.01px;
+
+  & .content {
+    width: 60%;
+    margin: auto;
+
+    & .row {
+      display: flex;
+      align-items: flex-end;
+      margin: 0 20px;
+      column-gap: 20px;
+  
+      & .col {
+        width: 50%;
+        border: blue solid px;
+        margin: 20px 0;
+      }
+    }
+  }
+}
